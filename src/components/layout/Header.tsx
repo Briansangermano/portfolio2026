@@ -49,6 +49,7 @@ export default function Header() {
   }, [])
 
   return (
+    <>
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
@@ -58,6 +59,7 @@ export default function Header() {
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <button
+          type="button"
           onClick={() => scrollToSection("#hero")}
           className="relative text-lg font-bold tracking-tight text-white after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-indigo-400 after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100"
         >
@@ -70,6 +72,7 @@ export default function Header() {
             return (
               <li key={item.href}>
                 <button
+                  type="button"
                   onClick={() => scrollToSection(item.href)}
                   className={`relative rounded-lg px-4 py-2 text-sm transition-all duration-300 ${
                     isActive
@@ -92,7 +95,8 @@ export default function Header() {
         </ul>
 
         <button
-          onClick={() => setMobileOpen(!mobileOpen)}
+          type="button"
+          onClick={() => setMobileOpen(prev => !prev)}
           className="relative z-50 flex h-8 w-8 flex-col items-center justify-center gap-1.5 md:hidden"
           aria-label="Toggle menu"
         >
@@ -113,13 +117,14 @@ export default function Header() {
           />
         </button>
       </nav>
+    </header>
 
-      <AnimatePresence>
+    <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, backdropFilter: "blur(0px)" }}
-            animate={{ opacity: 1, backdropFilter: "blur(20px)" }}
-            exit={{ opacity: 0, backdropFilter: "blur(0px)" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 flex items-center justify-center bg-[#0a0a0a]/90 backdrop-blur-2xl md:hidden"
           >
@@ -127,6 +132,7 @@ export default function Header() {
               {navItems.map((item) => (
                 <li key={item.href}>
                   <button
+                    type="button"
                     onClick={() => {
                       scrollToSection(item.href)
                       setMobileOpen(false)
@@ -140,7 +146,7 @@ export default function Header() {
             </ul>
           </motion.div>
         )}
-      </AnimatePresence>
-    </header>
+    </AnimatePresence>
+    </>
   )
 }
