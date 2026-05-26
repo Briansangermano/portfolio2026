@@ -61,7 +61,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => scrollToSection("#hero")}
-          className="relative text-lg font-bold tracking-tight text-white after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-indigo-400 after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100"
+          className="relative text-2xl font-bold tracking-tight text-white after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:bg-indigo-400 after:transition-transform after:duration-300 hover:after:origin-left hover:after:scale-x-100"
         >
           BS<span className="text-indigo-400">.</span>
         </button>
