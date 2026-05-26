@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen items-center overflow-hidden px-6 pt-24"
+      className="relative flex min-h-screen items-center px-6 pb-20 pt-28 sm:pt-24"
     >
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#050505] via-[#050505] to-[#050505]">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(99,102,241,0.08),rgba(168,85,247,0.03),transparent_50%)]" />
@@ -26,7 +26,7 @@ export default function Hero() {
         initial="hidden"
         animate="visible"
       >
-        <div className="flex flex-col gap-6">
+        <div className="flex min-w-0 flex-col gap-6">
           <motion.p
             variants={heroItem}
             className="text-base font-medium uppercase tracking-widest bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent sm:text-lg"
@@ -45,7 +45,7 @@ export default function Hero() {
 
           <motion.p
             variants={heroItem}
-            className="max-w-md text-base leading-relaxed text-zinc-400 sm:text-lg"
+            className="break-words text-base leading-relaxed text-zinc-400 sm:text-lg"
           >
             {title} — {summary}
           </motion.p>
@@ -67,15 +67,16 @@ export default function Hero() {
         </div>
 
         <motion.div variants={heroItem} className="relative flex justify-center md:justify-center">
-          <div className="relative h-72 w-72 overflow-hidden rounded-2xl border border-white/10 shadow-[0_0_40px_rgba(99,102,241,0.2),0_0_80px_rgba(168,85,247,0.1)] sm:h-80 sm:w-80">
+          <div className="relative h-72 w-72 sm:h-[32rem] sm:w-[32rem] sm:-ml-16">
             <Image
-              src="/images/hero-photo.png"
+              src="/images/hero-photo-removebg.png"
               alt={name}
               fill
-              sizes="(max-width: 640px) 288px, 320px"
-              className="object-cover object-[50%_15%]"
+              sizes="(max-width: 640px) 288px, 512px"
+              className="object-contain"
               preload
             />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#050505] to-transparent" />
           </div>
         </motion.div>
       </motion.div>

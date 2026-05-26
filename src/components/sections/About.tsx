@@ -42,17 +42,18 @@ export default function About() {
 
           <div className="md:col-span-2">
             <ScrollReveal delay={0.2}>
-              <div className="relative">
-                <div className="overflow-hidden rounded-2xl border border-white/10 shadow-[0_0_20px_rgba(99,102,241,0.08),0_0_40px_rgba(168,85,247,0.04)]">
+              <div className="relative mx-auto w-72 sm:w-80">
+                <div className="absolute -inset-1 rounded-[2rem] bg-gradient-to-b from-indigo-500/30 via-purple-500/20 to-pink-500/20 blur-xl" />
+                <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#050505] shadow-2xl shadow-indigo-500/10">
                   <Image
-                    src="/images/hero-photo.png"
+                    src="/images/hero-photo-full.jpg"
                     alt={name}
                     width={400}
-                    height={500}
-                    className="h-full w-full object-cover object-[50%_15%] transition-transform duration-500 hover:scale-105"
+                    height={600}
+                    className="h-auto w-full object-contain"
                   />
+                  <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#050505] to-transparent" />
                 </div>
-                <div className="absolute -right-4 -top-4 h-full w-full rounded-2xl border border-indigo-500/15 shadow-[0_0_25px_rgba(99,102,241,0.1),0_0_50px_rgba(168,85,247,0.05)]" />
               </div>
             </ScrollReveal>
           </div>

@@ -26,7 +26,7 @@ export default function Experience() {
             ease: "none",
             scrollTrigger: {
               trigger: timelineRef.current,
-              start: "top 60%",
+              start: "top 80%",
               end: "bottom 20%",
               scrub: 1.5,
             },
@@ -43,7 +43,7 @@ export default function Experience() {
   const { experience } = portfolioData
 
   return (
-    <section id="experience" className="relative px-6 py-32">
+    <section id="experience" className="relative scroll-mt-24 px-6 py-32">
       <div className="mx-auto max-w-5xl">
         <ScrollReveal>
           <span className="text-xs font-medium uppercase tracking-widest bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
