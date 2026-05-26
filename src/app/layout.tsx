@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
+import NebulaBackground from "@/components/effects/NebulaBackground"
 import "./globals.css"
 
 const geistSans = Geist({
@@ -31,7 +32,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="min-h-full bg-[#0a0a0a] font-sans text-white">
+      <body className="min-h-full font-sans text-white">
+        <NebulaBackground />
         <div className="grain" />
         {children}
       </body>

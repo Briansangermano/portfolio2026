@@ -66,7 +66,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        <motion.div variants={heroItem} className="relative flex justify-center md:justify-end">
+        <motion.div variants={heroItem} className="relative flex justify-center md:justify-center">
           <div className="relative h-72 w-72 overflow-hidden rounded-2xl border border-white/10 shadow-[0_0_40px_rgba(99,102,241,0.2),0_0_80px_rgba(168,85,247,0.1)] sm:h-80 sm:w-80">
             <Image
               src="/images/hero-photo.png"
