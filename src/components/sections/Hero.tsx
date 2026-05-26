@@ -67,16 +67,19 @@ export default function Hero() {
         </div>
 
         <motion.div variants={heroItem} className="relative flex justify-center md:justify-center">
-          <div className="relative h-72 w-72 sm:h-[32rem] sm:w-[32rem] sm:-ml-16">
-            <Image
-              src="/images/hero-photo-removebg.png"
-              alt={name}
-              fill
-              sizes="(max-width: 640px) 288px, 512px"
-              className="object-contain"
-              preload
-            />
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#050505] to-transparent" />
+          <div className="relative h-80 w-80 sm:h-[32rem] sm:w-[32rem] sm:-ml-16">
+            <div className="absolute -inset-1 rounded-[2rem] bg-gradient-to-b from-indigo-500/30 via-purple-500/20 to-pink-500/20 blur-xl" />
+            <div className="relative h-full w-full overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-[#050505] via-indigo-950/40 to-purple-950/40 shadow-2xl shadow-indigo-500/10">
+              <Image
+                src="/images/without-bg.png"
+                alt={name}
+                fill
+                sizes="(max-width: 640px) 320px, 512px"
+                className="object-contain"
+                priority
+              />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#050505] to-transparent" />
+            </div>
           </div>
         </motion.div>
       </motion.div>
