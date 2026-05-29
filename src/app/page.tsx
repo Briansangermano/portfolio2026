@@ -1,7 +1,8 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { setLenis } from "@/lib/lenis"
+import SplashScreen from "@/components/ui/SplashScreen"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import Hero from "@/components/sections/Hero"
@@ -14,7 +15,11 @@ import Certificates from "@/components/sections/Certificates"
 import Contact from "@/components/sections/Contact"
 
 export default function Home() {
+  const [splashDone, setSplashDone] = useState(false)
+
   useEffect(() => {
+    if (!splashDone) return
+
     async function initLenis() {
       const Lenis = (await import("lenis")).default
       const lenis = new Lenis({
@@ -43,10 +48,11 @@ export default function Home() {
     return () => {
       cleanup.then((fn) => fn())
     }
-  }, [])
+  }, [splashDone])
 
   return (
     <>
+      {!splashDone && <SplashScreen onFinish={() => setSplashDone(true)} />}
       <Header />
       <main>
         <Hero />
