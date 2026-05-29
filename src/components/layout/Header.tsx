@@ -53,8 +53,8 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[#050505]/70 backdrop-blur-2xl border-b border-white/5 shadow-[0_0_30px_rgba(99,102,241,0.1),0_0_60px_rgba(168,85,247,0.05)]"
-          : "bg-transparent"
+          ? "bg-[#050505]/70 backdrop-blur-2xl"
+          : "bg-indigo-950/40"
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -77,7 +77,7 @@ export default function Header() {
                   className={`relative rounded-lg px-4 py-2 text-sm transition-all duration-300 ${
                     isActive
                       ? "text-white"
-                      : "text-zinc-500 hover:text-zinc-300"
+                      : "text-zinc-500 hover:text-zinc-300 hover:bg-white/[0.04] hover:shadow-[0_0_12px_rgba(168,85,247,0.06)]"
                   }`}
                 >
                   {isActive && (
