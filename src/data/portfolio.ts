@@ -170,4 +170,21 @@ export const portfolioData: PortfolioData = {
     { language: "Spanish", level: "Native" },
     { language: "English", level: "Intermediate (B1–B2)" },
   ],
+
+  certificates: [
+    {
+      name: "Diplomatura en Inteligencia Artificial",
+      issuer: "Nuclio",
+      date: "2025",
+      file: "/images/certificates/Nuclio-IA.png",
+      type: "image",
+    },
+    {
+      name: "Curso IA: De 0 a Agentes",
+      issuer: "Big School",
+      date: "2025",
+      file: "/images/certificates/BigSchool-IA.png",
+      type: "image",
+    },
+  ],
 }

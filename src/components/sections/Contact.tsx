@@ -50,7 +50,7 @@ export default function Contact() {
         </ScrollReveal>
       </div>
 
-      <div className="section-number">07</div>
+      <div className="section-number">08</div>
     </section>
   )
 }

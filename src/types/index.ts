@@ -18,6 +18,14 @@ export interface SkillCategory {
   items: string[]
 }
 
+export interface Certificate {
+  name: string
+  issuer: string
+  date: string
+  file: string
+  type: "image" | "pdf"
+}
+
 export interface PortfolioData {
   name: string
   title: string
@@ -33,4 +41,5 @@ export interface PortfolioData {
     period: string
   }
   languages: { language: string; level: string }[]
+  certificates: Certificate[]
 }
