@@ -44,13 +44,14 @@ export default function About() {
             <ScrollReveal delay={0.2}>
               <div className="relative mx-auto w-72 sm:w-80">
                 <div className="absolute -inset-1 rounded-[2rem] bg-gradient-to-b from-indigo-500/30 via-purple-500/20 to-pink-500/20 blur-xl" />
-                <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#050505] shadow-2xl shadow-indigo-500/10">
+                <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#050505] shadow-2xl shadow-indigo-500/10 aspect-[2/3]">
                   <Image
-                    src="/images/hero-photo-full.jpg"
+                    src="/images/perfil-brian.png"
                     alt={name}
-                    width={400}
-                    height={600}
-                    className="h-auto w-full object-contain"
+                    fill
+                    className="object-cover object-[120%_20%]"
+                    style={{ transform: "scale(1.15) scaleX(-1)" }}
+                    sizes="(max-width: 640px) 288px, 320px"
                   />
                   <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-[#050505] to-transparent" />
                 </div>
