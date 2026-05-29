@@ -5,6 +5,7 @@ export const portfolioData: PortfolioData = {
   title: "Software Engineer | Frontend & Fullstack Developer",
   email: "Briansangermano@gmail.com",
   linkedin: "linkedin.com/in/brian-sangermano",
+  cv: "/cv/CV BrianSangermano.pdf",
   summary:
     "Software Engineer with 6+ years of experience building high-performance web applications with React, JavaScript, TypeScript, Vue.js, and Next.js. Focused on performance optimization and maintainable code built to last. Experienced working in frontend teams within Agile/Scrum environments, with a strong emphasis on clear communication and continuous improvement.",
 

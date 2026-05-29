@@ -8,9 +8,10 @@ interface MagneticButtonProps {
   className?: string
   target?: string
   rel?: string
+  download?: string | boolean
 }
 
-export default function MagneticButton({ children, href, className, target, rel }: MagneticButtonProps) {
+export default function MagneticButton({ children, href, className, target, rel, download }: MagneticButtonProps) {
   const ref = useRef<HTMLAnchorElement>(null)
 
   function handleMouseMove(e: MouseEvent<HTMLAnchorElement>) {
@@ -34,6 +35,7 @@ export default function MagneticButton({ children, href, className, target, rel 
       href={href}
       target={target}
       rel={rel}
+      download={download}
       className={`inline-block transition-transform duration-200 ease-out ${className}`}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}

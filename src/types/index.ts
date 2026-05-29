@@ -31,6 +31,7 @@ export interface PortfolioData {
   title: string
   email: string
   linkedin: string
+  cv: string
   summary: string
   experience: Experience[]
   projects: Project[]

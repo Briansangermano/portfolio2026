@@ -5,7 +5,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 import { portfolioData } from "@/data/portfolio"
 
 export default function Contact() {
-  const { email, linkedin } = portfolioData
+  const { email, linkedin, cv } = portfolioData
 
   return (
     <section id="contact" className="relative px-6 py-32">
@@ -36,15 +36,22 @@ export default function Contact() {
               href={`mailto:${email}`}
               className="rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 px-8 py-3 text-sm font-medium text-white shadow-[0_0_20px_rgba(99,102,241,0.3),0_0_40px_rgba(168,85,247,0.15)] transition-all duration-300 hover:from-indigo-600 hover:to-purple-700 hover:shadow-[0_0_30px_rgba(99,102,241,0.5),0_0_60px_rgba(168,85,247,0.25)]"
             >
-              {email}
+              Contact Me
             </MagneticButton>
             <MagneticButton
               href={`https://${linkedin}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-white/20 px-8 py-3 text-sm font-medium text-zinc-300 shadow-[0_0_15px_rgba(99,102,241,0.05),0_0_30px_rgba(168,85,247,0.03)] transition-all duration-300 hover:border-indigo-400/50 hover:text-white hover:shadow-[0_0_25px_rgba(99,102,241,0.15),0_0_50px_rgba(168,85,247,0.08)]"
+              className="rounded-full border border-white/20 bg-zinc-900 px-8 py-3 text-sm font-medium text-zinc-300 shadow-[0_0_15px_rgba(99,102,241,0.05),0_0_30px_rgba(168,85,247,0.03)] transition-all duration-300 hover:border-indigo-400/50 hover:text-white hover:shadow-[0_0_25px_rgba(99,102,241,0.15),0_0_50px_rgba(168,85,247,0.08)]"
             >
               LinkedIn
+            </MagneticButton>
+            <MagneticButton
+              href={cv}
+              download="CV-BrianSangermano.pdf"
+              className="rounded-full border border-white/20 bg-zinc-900 px-8 py-3 text-sm font-medium text-zinc-300 shadow-[0_0_15px_rgba(99,102,241,0.05),0_0_30px_rgba(168,85,247,0.03)] transition-all duration-300 hover:border-indigo-400/50 hover:text-white hover:shadow-[0_0_25px_rgba(99,102,241,0.15),0_0_50px_rgba(168,85,247,0.08)]"
+            >
+              Download Resume
             </MagneticButton>
           </div>
         </ScrollReveal>
